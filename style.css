@@ -18,10 +18,10 @@ html{
 .navbar{
     border-bottom: 1px solid #d1d7dc;
 }
-/* .section{
+ .section{
     width:100vw;
     height:100vh;
-} */
+} 
 .search-bar{
     border-radius: 0!important;
     width: 350px!important;
@@ -110,6 +110,10 @@ body {
 }
 .card-footer>a:hover{
     color:white;
+}
+.dropdown-menu{
+    height:306px;
+    width:270px;
 }
 .navbar-nav li:hover > ul.dropdown-menu {
     display: block;
