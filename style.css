@@ -254,9 +254,17 @@ body {
 	 z-index: 1;
 }
  .calendar__buttons {
+	 user-select: none;
+	 border:none;
 	 padding: 10px var(--side-padding) 20px;
 	 border-bottom-left-radius: var(--border-radius);
 	 border-bottom-right-radius: var(--border-radius);
+}
+.calendar__button:hover,.calendar__button:focus{
+		 user-select: none;
+	 outline: none;
+
+	 border:none;
 }
  .calendar__button {
 	 cursor: pointer;
@@ -283,7 +291,7 @@ body {
 	 font-size: 1.02rem;
 	 border-radius: 20px;
 	 outline: none;
-	 border: 0;
+	 border: none;
 	 padding: 15px 20px;
 	 -webkit-appearance: none;
 	 -moz-appearance: none;
@@ -294,4 +302,16 @@ body {
 	 background-size: 24px;
 	 background-repeat: no-repeat;
 	 background-position: calc(100% - var(--side-padding)) center;
+}
+.video{
+	width:400px;
+	height:250px;
+}
+.bg-grey{
+	color: #a2a2a2;
+}
+.about-video>p{
+	margin-top:10px;
+	color: #a2a2a2;
+
 }
