@@ -75,6 +75,7 @@ body {
     margin-left:20%
 }
 .tb{
+    height:auto;
     background-color: #edeff0;
 }
 .filter-bar>div>.dropdown-toggle{
@@ -111,7 +112,7 @@ body {
 .card-footer>a:hover{
     color:white;
 }
-.dropdown-menu{
+.ct-menu{
     height:306px;
     width:270px;
 }
