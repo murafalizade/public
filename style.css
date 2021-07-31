@@ -315,3 +315,23 @@ body {
 	color: #a2a2a2;
 
 }
+.check-div{
+	width:25px;
+	height:25px;
+	border-color:black!important
+}
+.content-sign-title{
+font-size: 1.rem;
+font-weight: 100;
+text-transform: uppercase;
+}
+.soft-color{
+	color:rgba(0, 0, 0, 0.54);
+}
+#contentdis2, #contentdis3, #contentdis4{
+	display:none;
+}
+.bigarea{
+
+	resize: none;
+}

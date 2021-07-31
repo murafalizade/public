@@ -32,8 +32,39 @@ if (window.innerWidth > 992) {
 // end if innerWidth
 }); 
 
+function forButton(){
+	document.getElementById('contentdis1').style.display = 'block'
+	document.getElementById('contentdis2').style.display = 'none'
+	document.getElementById('contentdis3').style.display = 'none'
+	document.getElementById('contentdis4').style.display = 'none'
+}
 
-//jQuery time
+document.getElementById('con2').addEventListener("click",function(e){
+	document.getElementById('contentdis2').style.display = 'block'
+	document.getElementById('contentdis1').style.display = 'none'
+	document.getElementById('contentdis3').style.display = 'none'
+	document.getElementById('contentdis4').style.display = 'none'
+});
 
+document.getElementById('con1').addEventListener("click", function (e) {
+	document.getElementById('contentdis1').style.display = 'block'
+	document.getElementById('contentdis2').style.display = 'none'
+	document.getElementById('contentdis3').style.display = 'none'
+	document.getElementById('contentdis4').style.display = 'none'
+});
+
+document.getElementById('con3').addEventListener("click", function (e) {
+	document.getElementById('contentdis2').style.display = 'none'
+	document.getElementById('contentdis1').style.display = 'none'
+	document.getElementById('contentdis3').style.display = 'block'
+	document.getElementById('contentdis4').style.display = 'none'
+});
+
+document.getElementById('con4').addEventListener("click", function (e) {
+	document.getElementById('contentdis2').style.display = 'none'
+	document.getElementById('contentdis1').style.display = 'none'
+	document.getElementById('contentdis3').style.display = 'none'
+	document.getElementById('contentdis4').style.display = 'block'
+});
 
 
