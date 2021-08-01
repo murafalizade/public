@@ -258,7 +258,10 @@
                                 </ul>
                             </li>
                         </ul>
-                    </li>
+                                                    <li class="nav-item ml-5">
+                                                        <a class="btn btn-primary" href="#">Find Tutor</a>
+                                                    </li>
+
                     <li class="nav-item ml-5">
                         <a class="btn btn-primary" href="#">Become Tutor</a>
                     </li>
@@ -284,12 +287,12 @@
 
 
 
-    <section class="section tb">
-        <div class="container-fluid">
+    <section class="section bg-light tb">
+        <div class="container  mt-5">
             <div class="row">
-                <div class="col-md-4 border-right">
+                <div class="col-md-4 border">
                     <div class='p-0'>
-                        <h3 class='text-left p-0 m-0'>Become a Malibr tutor</h3>
+                        <h3 class='text-left ml-3 p-2'>Become a Malibr tutor</h3>
                         <hr>
                         <ul>
                             <div class='selected' id='con1'>Welcome!</div>
@@ -299,16 +302,16 @@
                     <div>
                         <p class='text-left mx-5 soft-color content-sign-title'>Your signup checklist</p>
                         <ul>
-                            <div class='d-flex py-3' id='con2'>
+                            <div class='d-flex py-3' id='con3'>
                                 <h6>
-                                    Malibr profile
+                                    Basic Info
+
                                 </h6>
                                 <div class='rounded-circle ml-auto check-div border'></div>
                             </div>
-                            <div class='d-flex py-3' id='con3'>
+                            <div class='d-flex py-3' id='con2'>
                                 <h6>
-                                    Supplemental questions
-
+                                    Malibr profile
                                 </h6>
                                 <div class='rounded-circle ml-auto check-div border'></div>
                             </div>
@@ -319,15 +322,15 @@
                                 <div class='rounded-circle ml-auto check-div border'></div>
                             </div>
                         </ul>
-                        <div class='d-flex' style="justify-content: end;">
+                        <div class='d-flex' style="justify-content: flex-end;">
                             <span class='soft-color'>0/3 Completed</span>
                         </div>
-                        <div class='d-flex' style="justify-content: end;"><button
+                        <div class='d-flex' style="justify-content: flex-end;"><button
                                 class="btn btn-dark disabled">Sumbit</button></div>
 
                     </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 border">
                     <div id='contentdis1'>
                         <div class="p-5">
                             <h5>Welcome to Malibr!</h5>
@@ -344,8 +347,62 @@
                             </p>
                         </div>
                         <hr>
-                        <div class='d-flex px-5' style="justify-content: end;">
+                        <div class='d-flex px-5' style="justify-content: flex-end;">
                             <button onclick='forButton()' class="btn btn-dark">Let's Get Started</button>
+
+                        </div>
+                    </div>
+                    <div id='contentdis3'>
+                        <div class="p-5">
+                            <h5>Basic Info</h5>
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEmail4">First Name</label>
+                                        <input type="text" class="form-control" id="inputEmail4" placeholder="Firtname">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Last Name</label>
+                                        <input type="text" class="form-control" id="inputPassword4" placeholder="Lastname">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputState">Country</label>
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Choose...</option>
+                                            <option>Azerbaijan</option>
+                                            <option>English</option>
+                                            <option>Turkish</option>
+                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputAddress2">Birthday</label>
+                                        <input type="date" class="form-control" id="inputAddress2">
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5>
+                                        Language</h5>
+                                    <p>Tell students your English accent and any other languages you speak</p>
+                                    <div class="form-group">
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Choose...</option>
+                                            <option>Azerbaijan</option>
+                                            <option>English</option>
+                                            <option>Turkish</option>
+                                
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+                        <hr>
+                        <div class='d-flex px-5' style="justify-content: flex-end;">
+                            <button class="btn btn-dark disabled">Continue to Malibr profile </button>
 
                         </div>
                     </div>
@@ -363,35 +420,6 @@
                                 students may use the tutor profiles to find tutors they’ve had great experiences with
                                 already.</p>
                             </p>
-                            <form>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="inputEmail4">First Name</label>
-                                        <input type="text" class="form-control" id="inputEmail4" placeholder="Firtname">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputPassword4">Last Name</label>
-                                        <input type="text" class="form-control" id="inputPassword4"
-                                            placeholder="Lastname">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="inputState">Country</label>
-                                        <select id="inputState" class="form-control">
-                                            <option selected>Choose...</option>
-                                            <option>Azerbaijan</option>
-                                            <option>English</option>
-                                            <option>Turkish</option>
-
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputAddress2">Birthday</label>
-                                        <input type="date" class="form-control" id="inputAddress2">
-                                    </div>
-                                </div>
-                            </form>
                             <div class="video-input p-5 bg-dark mt-2">
                                 <h4 class='text-white'>Greet students with a video introduction</h4>
                                 <p class=' text-white'>Let students know what they can expect from a lesson with you by
@@ -403,37 +431,18 @@
                                     <div class='m-2'>
                                         <input style='width:25px;' type="file" class="custom-file-input"
                                             id="customFile">
-                                        <label class="btn btn-light" for="customFile">Upload video</label>
+                                        <label class="btn input-btn btn-light" for="customFile">Upload video</label>
                                     </div>
                                     <div class='m-2'>
-                                        <button class='btn btn-light'>Record Video</button>
+                                        <button class='btn input-btn btn-light'>Record Video</button>
                                     </div>
                                 </div>
                             </div>
                             <form>
-                                <div>
-                                    <p>Say hello and introduce yourself to students! This will be the first thing
-                                        students read about you when looking at their
-                                        tutor matches.</p>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlTextarea2">Introduction</label>
-                                        <textarea class="form-control bigarea" id="exampleFormControlTextarea2"
-                                            rows="5"></textarea>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h5>
-                                        Teaching Style</h5>
-                                    <p>Tell people more details about your teaching style.</p>
-                                    <div class="form-group">
-                                        <textarea class="form-control bigarea" id="exampleFormControlTextarea2"
-                                            rows="5"></textarea>
-                                    </div>
-                                </div>
-                                <div>
+                                <div class='mt-2'>
                                     <h5>
                                         About Me</h5>
-                                    <p>Write any additional information to expand on your introduction</p>
+                                    <p>Write any additional information to expand on yourself</p>
                                     <div class="form-group">
                                         <textarea class="form-control bigarea" id="exampleFormControlTextarea2"
                                             rows="5"></textarea>
@@ -441,101 +450,38 @@
                                 </div>
                                 <div>
                                     <h5>
-                                        Language</h5>
-                                    <p>Tell students your English accent and any other languages you speak</p>
+                                        About Course</h5>
+                                    <p>Write any additional information to expand on your course</p>
                                     <div class="form-group">
-                                        <select id="inputState" class="form-control">
-                                            <option selected>Choose...</option>
-                                            <option>Azerbaijan</option>
-                                            <option>English</option>
-                                            <option>Turkish</option>
-
-                                        </select>
+                                        <textarea class="form-control bigarea" id="exampleFormControlTextarea2" rows="5"></textarea>
                                     </div>
                                 </div>
                                 <div>
                                     <h5>
                                         Work Experience</h5>
                                     <div class="form-group">
-                                        <select id="inputState" class="form-control">
-                                            <option selected>Choose...</option>
-                                            <option>
-                                                <1 years</option>
-                                            <option>3-4 years</option>
-                                            <option>>5 years</option>
-
-                                        </select>
+                                        <textarea class="form-control bigarea" id="exampleFormControlTextarea2" rows="5"></textarea>
                                     </div>
                                 </div>
-
-                                <div>
-                                    <h5>
-                                        Education</h5>
-                                    <div class="form-group">
-                                        <select id="inputState" class="form-control">
-                                            <option selected>Choose...</option>
-                                            <option>A.S.O.I.U</option>
-                                            <option>B.D.U</option>
-                                            <option> U.N.E.C</option>
-
-                                        </select>
-                                    </div>
-                                </div>
-
                                 <div>
                                     <h5>
                                         Teaching Certificates</h5>
                                     <div class="form-group">
-                                        <input  type="file" class="custom-file-input"
-                                            id="customFile">
-                                        <label class=''  for="customFile">Upload file</label>
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class='btn border' for="customFile">Upload file</label>
                                     </div>
                                 </div>
 
                             </form>
                         </div>
                         <hr>
-                        <div class='d-flex px-5' style="justify-content: end;">
-                            <button class="btn btn-dark">Continue to Supplemental questions</button>
-
-                        </div>
-                    </div>
-                    <div id='contentdis3'>
-                        <div class="p-5">
-                            <h5>Supplemental questions</h5>
-                            <p>
-                                This information is used by our team internally and is not shared with students.
-                            </p>
-                            <form>
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Why do you want to tutor on Malibr</label>
-                                    <textarea class="form-control bigarea" id="exampleFormControlTextarea1"
-                                        rows="5"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Where did you hear about Malibr</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                        <option>Google Ads</option>
-                                        <option>Facebook Ads</option>
-                                        <option>Youtube Ads</option>
-
-                                        <option>Instagram Ads</option>
-
-                                        <option>Friend</option>
-                                        <option>Other</option>
-
-                                    </select>
-                                </div>
-                            </form>
-
-
-                        </div>
-                        <hr>
-                        <div class='d-flex px-5' style="justify-content: end;">
+                        <div class='d-flex px-5' style="justify-content: flex-end;">
                             <button class="btn btn-dark disabled">Continue to connection test </button>
 
+
                         </div>
                     </div>
+
                     <div id='contentdis4'>
                         <div class="p-5">
                             <h5>Let's test your connection</h5>
@@ -552,7 +498,7 @@
                             </p>
                         </div>
                         <hr>
-                        <div class='d-flex px-5' style="justify-content: end;">
+                        <div class='d-flex px-5' style="justify-content: flex-end;">
                             <button class="btn btn-dark disabled">Submit</button>
 
                         </div>
