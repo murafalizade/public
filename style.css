@@ -15,9 +15,9 @@
 html{
     overflow-x: hidden;
 }
-.navbar{
+/* .navbar{
     border-bottom: 1px solid #d1d7dc;
-}
+} */
  .section{
     width:100vw;
     min-height:100vh;
@@ -56,7 +56,8 @@ html{
 
 
 body {
-    font-family: montserrat, arial, verdana;
+	font-family: montserrat, arial, verdana;
+	background-image: url('./asd.jpeg');
 }
 
 
