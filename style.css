@@ -344,3 +344,6 @@ text-transform: uppercase;
 	color:white;
 	padding:5px;
 }
+.rounded-input{
+	border-radius:3.25rem;
+}
