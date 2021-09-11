@@ -347,3 +347,7 @@ text-transform: uppercase;
 .rounded-input{
 	border-radius:3.25rem;
 }
+.calendar-time{
+	display:flex;
+	flex-direction: column;
+}

@@ -88,33 +88,92 @@ function step2() {
 
 
 
-// document.getElementById('con2').addEventListener("click",function(e){
-// 	document.getElementById('contentdis2').style.display = 'block'
-// 	document.getElementById('contentdis1').style.display = 'none'
-// 	document.getElementById('contentdis3').style.display = 'none'
-// 	document.getElementById('contentdis4').style.display = 'none'
-// });
+document.getElementById('con2').addEventListener("click",function(e){
+	document.getElementById('contentdis2').style.display = 'block'
+	document.getElementById('contentdis1').style.display = 'none'
+	document.getElementById('contentdis3').style.display = 'none'
+	document.getElementById('contentdis4').style.display = 'none'
+});
 
-// document.getElementById('con1').addEventListener("click", function (e) {
-// 	document.getElementById('contentdis1').style.display = 'block'
-// 	document.getElementById('contentdis2').style.display = 'none'
-// 	document.getElementById('contentdis3').style.display = 'none'
-// 	document.getElementById('contentdis4').style.display = 'none'
-// });
+document.getElementById('con1').addEventListener("click", function (e) {
+	document.getElementById('contentdis1').style.display = 'block'
+	document.getElementById('contentdis2').style.display = 'none'
+	document.getElementById('contentdis3').style.display = 'none'
+	document.getElementById('contentdis4').style.display = 'none'
+});
 
-// document.getElementById('con3').addEventListener("click", function (e) {
-// 	document.getElementById('contentdis2').style.display = 'none'
-// 	document.getElementById('contentdis1').style.display = 'none'
-// 	document.getElementById('contentdis3').style.display = 'block'
-// 	document.getElementById('contentdis4').style.display = 'none'
-// });
+document.getElementById('con3').addEventListener("click", function (e) {
+	document.getElementById('contentdis2').style.display = 'none'
+	document.getElementById('contentdis1').style.display = 'none'
+	document.getElementById('contentdis3').style.display = 'block'
+	document.getElementById('contentdis4').style.display = 'none'
+});
 
-// document.getElementById('con4').addEventListener("click", function (e) {
-// 	document.getElementById('contentdis2').style.display = 'none'
-// 	document.getElementById('contentdis1').style.display = 'none'
-// 	document.getElementById('contentdis3').style.display = 'none'
-// 	document.getElementById('contentdis4').style.display = 'block'
-// });
+document.getElementById('con4').addEventListener("click", function (e) {
+	document.getElementById('contentdis2').style.display = 'none'
+	document.getElementById('contentdis1').style.display = 'none'
+	document.getElementById('contentdis3').style.display = 'none'
+	document.getElementById('contentdis4').style.display = 'block'
+});
+
+var a = 0;
+function addDiv(parent_div) {
+
+	if(a<23){
+		var hr = document.createElement('hr');
+		var select1 = document.createElement('select');
+		for (let i = 0; i < 24; i++) {
+			var option = document.createElement('option');
+			option.appendChild(document.createTextNode(`${i}:00`));
+			select1.appendChild(option);
+		}
+		var select2 = document.createElement('select');
+		var span = document.createElement('span');
+		for (let i = 0; i < 24; i++) {
+			var option = document.createElement('option');
+
+			option.appendChild(document.createTextNode(`${i}:00`));
+			select2.appendChild(option);
+		}
+		var btn = document.createElement('button');
+		btn.appendChild(document.createTextNode('+'));
+		btn.addEventListener('click',function(){addDiv();});
+
+		var parent = document.getElementById(parent_div);
+		if (parent) {
+			parent.appendChild(hr);
+			parent.appendChild(select1);
+			parent.appendChild(select2);
+			parent.appendChild(span);
+			parent.appendChild(btn);
+
+		}
+		a++;
+	}
+	else{
+		console.log('errror');
+	}
+	
+}
 
 
-console.log(document.getElementsByName('input'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
