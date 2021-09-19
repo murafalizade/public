@@ -186,21 +186,34 @@ $('.adding').on('click', function () {
 		"</select >";
 	$(parent).append(element)
 })
+
 var time1 = "";
 var time2 = "";
-
-$('#chcksel1').on('change', '.chckopt', function () {
-	 time1 = $(this).val();
+var datei = {
+	begin: time1,
+	end: time2
+}
+var dates = []
+$('body').on('change', '.chckopt', function () {
+	time1 = $(this).val();
 	const inpy = $('#txtoptvalues');
-
-	inpy.val(time1 + '-' + time2);
+	datei.begin = time1;
+	dates.push(datei);
+	var send = dates.map(function (date) {
+		return `${date['begin']}-${date['end']}`;
+	});
+	inpy.val(send.join())
 })
 
-$('#chcksel1').on('change', '.chckopt2', function () {
+$('body').on('change', '.chckopt2', function () {
 	 time2 = $(this).val();
 	const inpy = $('#txtoptvalues');
-	inpy.val(time1 + '-' + time2);
-
+	datei.end = time2;
+	dates.push(datei);
+	var send = dates.map(function (date) {
+		return `${date['begin']}-${date['end']}`;
+	});
+	inpy.val(send.join())
 })
 
 
