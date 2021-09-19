@@ -503,65 +503,43 @@
                         </div>
 
                         <div class='calendar-time'>
-                            <label>
-                                <input type='checkbox' />
-                                <span>Monday</span>
-                                <hr>
-                                <select value='.'>00:00
-                                    <option>00:00</option>
-                                    <option>01:00</option>
-                                    <option>02:00</option>
-                                    <option>03:00</option>
-                                    <option>04:00</option>
-                                    <option>05:00</option>
-                                    <option>06:00</option>
-                                    <option>07:00</option>
-                                    <option>08:00</option>
-                                    <option>09:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                    <option>14:00</option>
-                                    <option>15:00</option>
-                                    <option>16:00</option>
-                                    <option>17:00</option>
-                                    <option>18:00</option>
-                                    <option>19:00</option>
-                                    <option>20:00</option>
-                                    <option>21:00</option>
-                                    <option>22:00</option>
-                                    <option>23:00</option>
-                                </select>
-                                <span>to</span>
-                                <select value='.'>00:00
+<div class="form-group col-md-6">
+    <label>Monday</label>
+    <input type="checkbox" value="1" class="chck" onclick="chck1()" id="chck111">
+<label id="chcksel1" style="display: none;">
+    <hr>
+    <select value='.' class="chckopt">
+        <option class="ckccck">00:00</option>
+        <option class="ckccck">01:00</option>
+        <option>02:00</option>
+        <option>03:00</option>
+        <option>04:00</option>
+        <option>05:00</option>
+        <option>06:00</option>
+        <option>07:00</option>
+        <option>08:00</option>
 
-                                    <option>00:00</option>
-                                    <option>01:00</option>
-                                    <option>02:00</option>
-                                    <option>03:00</option>
-                                    <option>04:00</option>
-                                    <option>05:00</option>
-                                    <option>06:00</option>
-                                    <option>07:00</option>
-                                    <option>08:00</option>
-                                    <option>09:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                    <option>14:00</option>
-                                    <option>15:00</option>
-                                    <option>16:00</option>
-                                    <option>17:00</option>
-                                    <option>18:00</option>
-                                    <option>19:00</option>
-                                    <option>20:00</option>
-                                    <option>21:00</option>
-                                    <option>22:00</option>
-                                    <option>23:00</option>
-                                </select>
-                            </label>
+    </select>
+    <span>to</span>
+    <select value='.' class="chckopt2">
+        <option class="ckccck">00:00</option>
+        <option class="ckccck">01:00</option>
+        <option>02:00</option>
+        <option>03:00</option>
+        <option>04:00</option>
+        <option>05:00</option>
+        <option>06:00</option>
+        <option>07:00</option>
+        <option>08:00</option>
+    </select>
+    <button class='adding'>+</button>
+
+</label>
+
+   
+    <input type="text" name="days_hours" id="txtoptvalues">
+
+</div>
                             <label id='tuesday'>
                                 <input type='checkbox' />
                                 <span>Tuesday</span>
@@ -626,33 +604,8 @@
                                 <input type='checkbox' />
                                 <span>Wednesday</span>
                                 <hr>
-                                <select value='.'>00:00
-
-                                    <option>00:00</option>
-                                    <option>01:00</option>
-                                    <option>02:00</option>
-                                    <option>03:00</option>
-                                    <option>04:00</option>
-                                    <option>05:00</option>
-                                    <option>06:00</option>
-                                    <option>07:00</option>
-                                    <option>08:00</option>
-                                    <option>09:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                    <option>14:00</option>
-                                    <option>15:00</option>
-                                    <option>16:00</option>
-                                    <option>17:00</option>
-                                    <option>18:00</option>
-                                    <option>19:00</option>
-                                    <option>20:00</option>
-                                    <option>21:00</option>
-                                    <option>22:00</option>
-                                    <option>23:00</option>
-                                </select>
+                               
+                            <input class='form-control' type='time' max-value='23:00' >
                                 <span>to</span>
                                 <select value='.'>00:00
                                     <option>00:00</option>
@@ -1103,8 +1056,7 @@
 
 
 
-    <!--Custom js-->
-    <script src="index.js"></script>
+
     <!--jquery js-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -1112,6 +1064,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
+            <!--Custom js-->
+            <script src="index.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
