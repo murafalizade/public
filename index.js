@@ -157,66 +157,64 @@ var a = 0;
 // }
 
 
-$('.adding').on('click', function () {
-	const parent = $(this).parent();
-	console.log($(parent));
-	const element = "<hr>" +
-		"	<select  class='chckopt' >" +
-		"<option>00:00</option>" +
-		"<option>01:00</option>" +
-		" <option>02:00</option>" +
-		" <option>03:00</option>" +
-		"<option>04:00</option>" +
-		"<option>05:00</option>" +
-		"<option>06:00</option>" +
-		"<option>07:00</option>" +
-		"<option>08:00</option>" +
-		"</select >" +
-		"<span>to</span>" +
-		"	<select  class='chckopt' >" +
-		"<option>00:00</option>" +
-		"<option>01:00</option>" +
-		" <option>02:00</option>" +
-		" <option>03:00</option>" +
-		"<option>04:00</option>" +
-		"<option>05:00</option>" +
-		"<option>06:00</option>" +
-		"<option>07:00</option>" +
-		"<option>08:00</option>" +
-		"</select >";
-	$(parent).append(element)
-})
+// $('.adding').on('click', function () {
+// 	const parent = $(this).parent();
+// 	console.log($(parent));
+// 	const element = "<hr>" +
+// 		"	<select  class='chckopt' >" +
+// 		"<option>00:00</option>" +
+// 		"<option>01:00</option>" +
+// 		" <option>02:00</option>" +
+// 		" <option>03:00</option>" +
+// 		"<option>04:00</option>" +
+// 		"<option>05:00</option>" +
+// 		"<option>06:00</option>" +
+// 		"<option>07:00</option>" +
+// 		"<option>08:00</option>" +
+// 		"</select >" +
+// 		"<span>to</span>" +
+// 		"	<select  class='chckopt' >" +
+// 		"<option>00:00</option>" +
+// 		"<option>01:00</option>" +
+// 		" <option>02:00</option>" +
+// 		" <option>03:00</option>" +
+// 		"<option>04:00</option>" +
+// 		"<option>05:00</option>" +
+// 		"<option>06:00</option>" +
+// 		"<option>07:00</option>" +
+// 		"<option>08:00</option>" +
+// 		"</select >";
+// 	$(parent).append(element)
+// })
 
-var time1 = "";
-var time2 = "";
-var datei = {
-	begin: time1,
-	end: time2
-}
-var dates = []
-$('body').on('change', '.chckopt', function () {
-	time1 = $(this).val();
-	const inpy = $('#txtoptvalues');
-	datei.begin = time1;
-	dates.push(datei);
-	var send = dates.map(function (date) {
-		return `${date['begin']}-${date['end']}`;
-	});
-	inpy.val(send.join())
-})
+// var time1 = "";
+// var time2 = "";
+// var datei = {
+// 	begin: time1,
+// 	end: time2
+// }
+// var dates = []
+// $('body').on('change', '.chckopt', function () {
+// 	time1 = $(this).val();
+// 	const inpy = $('#txtoptvalues');
+// 	datei.begin = time1;
+// 	dates.push(datei);
+// 	var send = dates.map(function (date) {
+// 		return `${date['begin']}-${date['end']}`;
+// 	});
+// 	inpy.val(send.join())
+// })
 
-$('body').on('change', '.chckopt2', function () {
-	 time2 = $(this).val();
-	const inpy = $('#txtoptvalues');
-	datei.end = time2;
-	dates.push(datei);
-	var send = dates.map(function (date) {
-		return `${date['begin']}-${date['end']}`;
-	});
-	inpy.val(send.join())
-})
-
-
+// $('body').on('change', '.chckopt2', function () {
+// 	 time2 = $(this).val();
+// 	const inpy = $('#txtoptvalues');
+// 	datei.end = time2;
+// 	dates.push(datei);
+// 	var send = dates.map(function (date) {
+// 		return `${date['begin']}-${date['end']}`;
+// 	});
+// 	inpy.val(send.join())
+// })
 
 
 
@@ -230,41 +228,43 @@ $('body').on('change', '.chckopt2', function () {
 
 
 
-function myFunction() {
-	var checkBox = document.getElementById("ch1");
-	var text = document.getElementById("price11");
-	var text1 = document.getElementById("price1");
-	if (checkBox.checked == true) {
-		text.style.display = "block";
-		text1.style.display = "block";
-	} else {
-		text.style.display = "none";
-		text1.style.display = "none";
-	}
-}
-
-function myFunction1() {
-	var checkBox = document.getElementById("ch2");
-	var text = document.getElementById("price2");
-	if (checkBox.checked == true) {
-		text.style.display = "block";
-	} else {
-		text.style.display = "none";
-	}
-}
 
 
+// function myFunction() {
+// 	var checkBox = document.getElementById("ch1");
+// 	var text = document.getElementById("price11");
+// 	var text1 = document.getElementById("price1");
+// 	if (checkBox.checked == true) {
+// 		text.style.display = "block";
+// 		text1.style.display = "block";
+// 	} else {
+// 		text.style.display = "none";
+// 		text1.style.display = "none";
+// 	}
+// }
 
-function chck1() {
-	var checkBox = document.getElementById("chck111");
-	var text = document.getElementById("chcksel1");
-	// var text1 = document.getElementById("chcksel2");
-	if (checkBox.checked == true) {
-		text.style.display = "block";
-		// text1.style.display = "block";
-	} else {
-		text.style.display = "none";
-		// text1.style.display = "none";
-	}
-}
+// function myFunction1() {
+// 	var checkBox = document.getElementById("ch2");
+// 	var text = document.getElementById("price2");
+// 	if (checkBox.checked == true) {
+// 		text.style.display = "block";
+// 	} else {
+// 		text.style.display = "none";
+// 	}
+// }
+
+
+
+// function chck1() {
+// 	var checkBox = document.getElementById("chck111");
+// 	var text = document.getElementById("chcksel1");
+// 	// var text1 = document.getElementById("chcksel2");
+// 	if (checkBox.checked == true) {
+// 		text.style.display = "block";
+// 		// text1.style.display = "block";
+// 	} else {
+// 		text.style.display = "none";
+// 		// text1.style.display = "none";
+// 	}
+// }
 

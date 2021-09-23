@@ -5,13 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Boostrap links-->
+        <link href='./lib/main.css' rel='stylesheet' />
+        <script src='./lib/main.js'></script>
     <link rel="stylesheet" href="font-awesome.min.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!--Custom css-->
     <link rel="stylesheet" href="style.css">
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                headerToolbar: {
+                    left: 'prev,next',
+                    center: 'title',
+                    right: 'timeGridWeek'
+                },
+                initialDate: '2020-09-12',
+                navLinks: true, // can click day/week names to navigate views
+                selectable: true,
+                selectMirror: true,
+                select: function (arg) {
+                    var title = prompt('Event Title:');
+                    if (title) {
+                        calendar.addEvent({
+                            title: title,
+                            start: arg.start,
+                            end: arg.end,
+                            allDay: arg.allDay
+                        })
+                    }
+                    console.log(title, arg.start, arg.end);
+                    calendar.unselect()
+                },
+                eventClick: function (arg) {
+                    if (confirm('Are you sure you want to delete this event?')) {
+                        arg.event.remove()
+                    }
+                },
+                editable: true,
+                dayMaxEvents: true, // allow "more" link when too many events
+                events: [
+                    {
+                        title: 'All Day Event',
+                        start: '2020-09-01',
+                    },
+                    {
+                        title: 'Long Event',
+                        start: '2020-09-07',
+                        end: '2020-09-10'
+                    },
+                    {
+                        groupId: 999,
+                        title: 'Repeating Event',
+                        start: '2020-09-09T16:00:00'
+                    },
+                    {
+                        groupId: 999,
+                        title: 'Repeating Event',
+                        start: '2020-09-16T16:00:00'
+                    },
+                    {
+                        title: 'Conference',
+                        start: '2020-09-11',
+                        end: '2020-09-13'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2020-09-12T10:30:00',
+                        end: '2020-09-12T12:30:00'
+                    },
+                    {
+                        title: 'Lunch',
+                        start: '2020-09-12T12:00:00'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2020-09-12T14:30:00'
+                    },
+                    {
+                        title: 'Happy Hour',
+                        start: '2020-09-12T17:30:00'
+                    },
+                    {
+                        title: 'Dinner',
+                        start: '2020-09-12T20:00:00'
+                    },
+                    {
+                        title: 'Birthday Party',
+                        start: '2020-09-13T07:00:00'
+                    },
+                    {
+                        title: 'Click for Google',
+                        url: 'http://google.com/',
+                        start: '2020-09-28'
+                    }
+                ]
+            });
+
+            calendar.render();
+        });
+
+    </script>
     <title>Malibr</title>
+    <style>
+        #calendar {
+            max-width: 650px;
+            text-align:center;
+        }
+    </style>
 </head>
 
 <body>
@@ -501,399 +607,18 @@
                                 version of Google Chrome</p>
                             </p>
                         </div>
+                                <div id='calendar'></div>
+                            <hr>
+                            <div class='d-flex px-5' style="justify-content: flex-end;">
+                                <button class="btn btn-dark ">Submit</button>
 
-                        <div class='calendar-time'>
-<div class="form-group col-md-6">
-    <label>Monday</label>
-    <input type="checkbox" value="1" class="chck" onclick="chck1()" id="chck111">
-<label id="chcksel1" style="display: none;">
-    <hr>
-    <select value='.' class="chckopt">
-        <option class="ckccck">00:00</option>
-        <option class="ckccck">01:00</option>
-        <option>02:00</option>
-        <option>03:00</option>
-        <option>04:00</option>
-        <option>05:00</option>
-        <option>06:00</option>
-        <option>07:00</option>
-        <option>08:00</option>
-
-    </select>
-    <span>to</span>
-    <select value='.' class="chckopt2">
-        <option class="ckccck">00:00</option>
-        <option class="ckccck">01:00</option>
-        <option>02:00</option>
-        <option>03:00</option>
-        <option>04:00</option>
-        <option>05:00</option>
-        <option>06:00</option>
-        <option>07:00</option>
-        <option>08:00</option>
-    </select>
-    <button class='adding'>+</button>
-
-</label>
-
-   
-    <input type="text" name="days_hours" id="txtoptvalues">
-
-</div>
-                            <label id='tuesday'>
-                                <input type='checkbox' />
-                                <span>Tuesday</span>
-                                <hr>
-                                <select value='.'>00:00
-
-                                    <option>00:00</option>
-                                    <option>01:00</option>
-                                    <option>02:00</option>
-                                    <option>03:00</option>
-                                    <option>04:00</option>
-                                    <option>05:00</option>
-                                    <option>06:00</option>
-                                    <option>07:00</option>
-                                    <option>08:00</option>
-                                    <option>09:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                    <option>14:00</option>
-                                    <option>15:00</option>
-                                    <option>16:00</option>
-                                    <option>17:00</option>
-                                    <option>18:00</option>
-                                    <option>19:00</option>
-                                    <option>20:00</option>
-                                    <option>21:00</option>
-                                    <option>22:00</option>
-                                    <option>23:00</option>
-                                </select>
-                                <span>to</span>
-                                <select value='.'>00:00
-                                    <option>00:00</option>
-                                    <option>01:00</option>
-                                    <option>02:00</option>
-                                    <option>03:00</option>
-                                    <option>04:00</option>
-                                    <option>05:00</option>
-                                    <option>06:00</option>
-                                    <option>07:00</option>
-                                    <option>08:00</option>
-                                    <option>09:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                    <option>14:00</option>
-                                    <option>15:00</option>
-                                    <option>16:00</option>
-                                    <option>17:00</option>
-                                    <option>18:00</option>
-                                    <option>19:00</option>
-                                    <option>20:00</option>
-                                    <option>21:00</option>
-                                    <option>22:00</option>
-                                    <option>23:00</option>
-                                </select>
-                                <button onclick='addDiv("tuesday")'>+</button>
-                            </label>
-                            <label>
-                                <input type='checkbox' />
-                                <span>Wednesday</span>
-                                <hr>
-                               
-                            <input class='form-control' type='time' max-value='23:00' >
-                                <span>to</span>
-                                <select value='.'>00:00
-                                    <option>00:00</option>
-                                    <option>01:00</option>
-                                    <option>02:00</option>
-                                    <option>03:00</option>
-                                    <option>04:00</option>
-                                    <option>05:00</option>
-                                    <option>06:00</option>
-                                    <option>07:00</option>
-                                    <option>08:00</option>
-                                    <option>09:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                    <option>14:00</option>
-                                    <option>15:00</option>
-                                    <option>16:00</option>
-                                    <option>17:00</option>
-                                    <option>18:00</option>
-                                    <option>19:00</option>
-                                    <option>20:00</option>
-                                    <option>21:00</option>
-                                    <option>22:00</option>
-                                    <option>23:00</option>
-                                </select>
-                            </label>
-                            <label>
-                                <input type='checkbox' />
-                                <span>Thureday</span>
-                                <hr>
-                                <select value='.'>00:00
-                                    <option>00:00</option>
-                                    <option>01:00</option>
-                                    <option>02:00</option>
-                                    <option>03:00</option>
-                                    <option>04:00</option>
-                                    <option>05:00</option>
-                                    <option>06:00</option>
-                                    <option>07:00</option>
-                                    <option>08:00</option>
-                                    <option>09:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                    <option>14:00</option>
-                                    <option>15:00</option>
-                                    <option>16:00</option>
-                                    <option>17:00</option>
-                                    <option>18:00</option>
-                                    <option>19:00</option>
-                                    <option>20:00</option>
-                                    <option>21:00</option>
-                                    <option>22:00</option>
-                                    <option>23:00</option>
-                                </select>
-                                <span>to</span>
-                                <select value='.'>00:00
-                                    <option>00:00</option>
-                                    <option>01:00</option>
-                                    <option>02:00</option>
-                                    <option>03:00</option>
-                                    <option>04:00</option>
-                                    <option>05:00</option>
-                                    <option>06:00</option>
-                                    <option>07:00</option>
-                                    <option>08:00</option>
-                                    <option>09:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                    <option>14:00</option>
-                                    <option>15:00</option>
-                                    <option>16:00</option>
-                                    <option>17:00</option>
-                                    <option>18:00</option>
-                                    <option>19:00</option>
-                                    <option>20:00</option>
-                                    <option>21:00</option>
-                                    <option>22:00</option>
-                                    <option>23:00</option>
-                                </select>
-                            </label>
-                            <label>
-                                <input type='checkbox' />
-                                <span>Friday</span>
-                                <hr>
-                                <select value='.'>00:00
-
-                                    <option>00:00</option>
-                                    <option>01:00</option>
-                                    <option>02:00</option>
-                                    <option>03:00</option>
-                                    <option>04:00</option>
-                                    <option>05:00</option>
-                                    <option>06:00</option>
-                                    <option>07:00</option>
-                                    <option>08:00</option>
-                                    <option>09:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                    <option>14:00</option>
-                                    <option>15:00</option>
-                                    <option>16:00</option>
-                                    <option>17:00</option>
-                                    <option>18:00</option>
-                                    <option>19:00</option>
-                                    <option>20:00</option>
-                                    <option>21:00</option>
-                                    <option>22:00</option>
-                                    <option>23:00</option>
-                                </select>
-                                <span>to</span>
-                                <select value='.'>00:00
-                                    <option>00:00</option>
-                                    <option>01:00</option>
-                                    <option>02:00</option>
-                                    <option>03:00</option>
-                                    <option>04:00</option>
-                                    <option>05:00</option>
-                                    <option>06:00</option>
-                                    <option>07:00</option>
-                                    <option>08:00</option>
-                                    <option>09:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                    <option>14:00</option>
-                                    <option>15:00</option>
-                                    <option>16:00</option>
-                                    <option>17:00</option>
-                                    <option>18:00</option>
-                                    <option>19:00</option>
-                                    <option>20:00</option>
-                                    <option>21:00</option>
-                                    <option>22:00</option>
-                                    <option>23:00</option>
-                                </select>
-                            </label>
-                            <label>
-                                <input type='checkbox' />
-                                <span>Saturday</span>
-                                <hr>
-                                <select value='.'>00:00
-                                    <option>00:00</option>
-                                    <option>01:00</option>
-                                    <option>02:00</option>
-                                    <option>03:00</option>
-                                    <option>04:00</option>
-                                    <option>05:00</option>
-                                    <option>06:00</option>
-                                    <option>07:00</option>
-                                    <option>08:00</option>
-                                    <option>09:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                    <option>14:00</option>
-                                    <option>15:00</option>
-                                    <option>16:00</option>
-                                    <option>17:00</option>
-                                    <option>18:00</option>
-                                    <option>19:00</option>
-                                    <option>20:00</option>
-                                    <option>21:00</option>
-                                    <option>22:00</option>
-                                    <option>23:00</option>
-                                </select>
-                                <span>to</span>
-                                <select value='.'>00:00
-
-                                    <option>00:00</option>
-                                    <option>01:00</option>
-                                    <option>02:00</option>
-                                    <option>03:00</option>
-                                    <option>04:00</option>
-                                    <option>05:00</option>
-                                    <option>06:00</option>
-                                    <option>07:00</option>
-                                    <option>08:00</option>
-                                    <option>09:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                    <option>14:00</option>
-                                    <option>15:00</option>
-                                    <option>16:00</option>
-                                    <option>17:00</option>
-                                    <option>18:00</option>
-                                    <option>19:00</option>
-                                    <option>20:00</option>
-                                    <option>21:00</option>
-                                    <option>22:00</option>
-                                    <option>23:00</option>
-                                </select>
-                            </label>
-                            <label>
-                                <input type='checkbox' />
-                                <span>Sunday</span>
-                                <hr>
-                                <select value='.'>00:00
-
-                                    <option>00:00</option>
-                                    <option>01:00</option>
-                                    <option>02:00</option>
-                                    <option>03:00</option>
-                                    <option>04:00</option>
-                                    <option>05:00</option>
-                                    <option>06:00</option>
-                                    <option>07:00</option>
-                                    <option>08:00</option>
-                                    <option>09:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                    <option>14:00</option>
-                                    <option>15:00</option>
-                                    <option>16:00</option>
-                                    <option>17:00</option>
-                                    <option>18:00</option>
-                                    <option>19:00</option>
-                                    <option>20:00</option>
-                                    <option>21:00</option>
-                                    <option>22:00</option>
-                                    <option>23:00</option>
-                                </select>
-                                <span>to</span>
-                                <select value='.'>00:00
-
-                                    <option>00:00</option>
-                                    <option>01:00</option>
-                                    <option>02:00</option>
-                                    <option>03:00</option>
-                                    <option>04:00</option>
-                                    <option>05:00</option>
-                                    <option>06:00</option>
-                                    <option>07:00</option>
-                                    <option>08:00</option>
-                                    <option>09:00</option>
-                                    <option>10:00</option>
-                                    <option>11:00</option>
-                                    <option>12:00</option>
-                                    <option>13:00</option>
-                                    <option>14:00</option>
-                                    <option>15:00</option>
-                                    <option>16:00</option>
-                                    <option>17:00</option>
-                                    <option>18:00</option>
-                                    <option>19:00</option>
-                                    <option>20:00</option>
-                                    <option>21:00</option>
-                                    <option>22:00</option>
-                                    <option>23:00</option>
-                                </select>
-                            </label>
-
+                            </div>
                         </div>
 
-
-
-
-
-
-
-
-
-
-
-                        <hr>
-                        <div class='d-flex px-5' style="justify-content: flex-end;">
-                            <button class="btn btn-dark ">Submit</button>
-
-                        </div>
                     </div>
 
                 </div>
-
             </div>
-        </div>
 
 
 
@@ -1064,8 +789,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-            <!--Custom js-->
-            <script src="index.js"></script>
+    <!--Custom js-->
+    <script src="index.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
