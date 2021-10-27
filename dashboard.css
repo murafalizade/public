@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.dashboard{
+	display: flex;
+}
+.dashboard-side{
+    background-color: #fafafa;
+	flex:1;
+    height: 100vh;
+}
+.dashboard-main{
+    padding: 15px;
+	flex:4;
+}
+.dash-nav{
+    display: flex;
+    justify-content:space-between ;
+}
+.dash-nav input{
+    width: 40%;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid;
+    padding-left: 5px;
+    outline: none;
+}
+.lesson-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #d8f1ff;
+    /* width: 350px; */
+    padding: 15px;
+    margin-bottom: 15px;
+    height: 85px;
+    text-align: center;
+}
+.side-select{
+    color: #90a5d7!important;;
+}
+.dash-list{
+    padding:10px;
+}
+.dash-list a{
+    background-color: transparent!important;
+    color: black;
+    border:none;
+    margin-left: 39px;
+}

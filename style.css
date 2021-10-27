@@ -351,9 +351,30 @@ text-transform: uppercase;
 	display:flex;
 	flex-direction: column;
 }
+.cat-sec{
+	height: 100vh;
+	padding-top: 10px;
+	background-color: #f8f9fa;
+}
 .profile-image{
 	width:250px;
 	height:250px;
 	border-radius:50%;
 	margin-bottom:20px;
+}
+.cat-box{
+	padding-top: 15px;
+	background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+	text-align: center;
+	margin-left: 25px;
+	margin-bottom: 15px;
+	width: 250px;
+	height: 170px; 
+}
+.cat-box:hover{
+	background-color: #20AD96;
+	color:white
 }

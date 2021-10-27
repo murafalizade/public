@@ -268,3 +268,10 @@ var a = 0;
 // 	}
 // }
 
+String.prototype.distance = function (char) {
+    var index = this.indexOf(char);
+	console.log(index);
+    
+};
+
+'asdasd'.distance();
