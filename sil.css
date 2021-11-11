@@ -1,0 +1,11 @@
+h2{
+    font-size: 150px;
+    color:red;
+    text-shadow: 20px 10px green;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+h3{
+    font-size: 25px;
+    word-spacing: 10px;
+}
